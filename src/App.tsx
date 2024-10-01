@@ -3,6 +3,7 @@ import Header from './components/header/Header'
 import Product from './components/product/Product'
 import './index.css'
 import Detail from './components/detail/Detail'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Product />} />
         <Route path="/product/:id" element={<Detail />} />
       </Routes>
+      <Footer/>
     </>
   )
 }
