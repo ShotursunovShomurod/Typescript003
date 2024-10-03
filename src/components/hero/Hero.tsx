@@ -1,21 +1,23 @@
-import { FC } from "react"
+import React, { Component } from "react";
 
 interface Props {
-    title: string,
-    price: number,
-    children: JSX.Element
+    title: string;
+    price: number;
+    children: JSX.Element;
 }
 
-const Hero: FC<Props> = ({ title, price, children }) => {
-    return (
-        <>
+class Hero extends Component<Props> {
+    render() {
+        const { title, price, children } = this.props;
+
+        return (
             <div>
                 <p>{title}</p>
                 <p>{price}</p>
                 {children}
             </div>
-        </>
-    )
+        );
+    }
 }
 
-export default Hero
+export default Hero;
